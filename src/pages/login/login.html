@@ -1,0 +1,20 @@
+<ion-content hide-tabs padding>
+  <form enctype="multipart/form-data">
+    <ion-item>
+      <ion-input type="email" placeholder="E-mail" name="email"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="password" placeholder="Password" name="password"></ion-input>
+    </ion-item>
+  
+    <div padding text-left>
+      <button ion-button small clear>Lupa Password?</button>
+    </div>
+  
+    <div text-center>
+      <button ion-button round block (click)="login()">Masuk</button>
+      <button ion-button round outline block>Daftar Akun</button>
+    </div>
+  </form>
+</ion-content>

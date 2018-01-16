@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>
+      Profile    
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+ 
+
+<ion-row>
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="../assets/imgs/xstore.png">
+    </ion-avatar>
+    <h2>Matthew</h2>
+    <p>Food Lovers</p>
+
+    <button item-end ion-button clear color="dark" (click)="editProfile()">Edit</button>
+  </ion-item>
+</ion-row>
+
+  <ion-row text-center>
+    <ion-col>
+      <button ion-button clear icon-only color="dark"><strong>200</strong></button> <br>
+      Posts
+    </ion-col>
+    <ion-col>
+      <button ion-button clear icon-only color="dark"><strong>5,000</strong></button> <br>
+      Points
+    </ion-col>
+    <ion-col>
+      <button ion-button clear icon-only color="dark"><strong>100</strong></button> <br>
+      Followers
+    </ion-col>
+    <ion-col>
+      <button ion-button clear icon-only color="dark"><strong>99</strong></button> <br>
+      Following
+    </ion-col>
+  </ion-row>
+
+
+<div padding>
+  <ion-segment [(ngModel)]="type" color="dark">
+    <ion-segment-button value="grid">
+      <ion-icon name="apps"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="list">
+      <ion-icon name="list"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="type">
+  <ion-list *ngSwitchCase="'grid'">
+   <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <img src="../assets/imgs/lawn.jpg" height="80px">
+      </ion-col>
+      <ion-col col-4>
+        <img src="../assets/imgs/lawn.jpg" height="80px">
+      </ion-col>
+      <ion-col col-4>
+        <img src="../assets/imgs/lawn.jpg" height="80px">
+      </ion-col>
+    </ion-row>
+   </ion-grid>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'list'">
+<ion-card>
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="../assets/imgs/xstore.png">
+    </ion-avatar>
+    <h2>Jordy</h2>
+    <p>La Brisa</p>
+  </ion-item>
+
+  <img src="../assets/imgs/lawn.jpg">
+
+  <ion-card-content>
+    <p>Keren!</p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>120 Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>9 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-left>
+      <ion-note>
+        10 days ago
+      </ion-note>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+  </ion-list>
+</div>
+
+
+
+  
+
+</ion-content>
