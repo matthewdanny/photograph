@@ -13,6 +13,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { EditProfilePage } from '../pages/edit-profile/edit-profile';
+import { PlaceListPage } from '../pages/place-list/place-list';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { EditProfilePage } from '../pages/edit-profile/edit-profile';
     TabsPage,
     LikePage,
     LoginPage,
-    EditProfilePage
+    EditProfilePage,
+    PlaceListPage,
+
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,7 @@ import { EditProfilePage } from '../pages/edit-profile/edit-profile';
     LikePage,
     LoginPage,
     EditProfilePage,
+    PlaceListPage,
   ],
   providers: [
     StatusBar,
